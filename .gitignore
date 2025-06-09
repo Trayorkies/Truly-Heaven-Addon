@@ -1,11 +1,6 @@
 # Project exclude paths
-/.gradle/
-/build/
-/common/.gradle/
-/common/build/
-/fabric/.gradle/
-/fabric/build/
-/forge/.gradle/
-/forge/build/
 .idea/
 **/run/
+**/.gradle/
+**/build/
+*/src/main/generated/
