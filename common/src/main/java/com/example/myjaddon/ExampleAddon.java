@@ -1,6 +1,6 @@
 package com.example.myjaddon;
 
-public final class ExampleMod {
+public final class ExampleAddon {
     public static final String MOD_ID = "myjaddon";
 
     public static void init() {

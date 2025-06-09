@@ -2,7 +2,7 @@ package com.example.myjaddon.fabric;
 
 import net.fabricmc.api.ModInitializer;
 
-import com.example.myjaddon.ExampleMod;
+import com.example.myjaddon.ExampleAddon;
 
 public final class ExampleModFabric implements ModInitializer {
     @Override
@@ -12,6 +12,6 @@ public final class ExampleModFabric implements ModInitializer {
         // Proceed with mild caution.
 
         // Run our common setup.
-        ExampleMod.init();
+        ExampleAddon.init();
     }
 }
