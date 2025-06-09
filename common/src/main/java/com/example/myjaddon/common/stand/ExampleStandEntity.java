@@ -6,6 +6,8 @@ import mod.azure.azurelib.core.animation.RawAnimation;
 import net.arna.jcraft.JCraft;
 import net.arna.jcraft.api.attack.MoveSet;
 import net.arna.jcraft.api.attack.MoveSetManager;
+import net.arna.jcraft.api.stand.StandData;
+import net.arna.jcraft.api.stand.StandInfo;
 import net.arna.jcraft.common.attack.core.MoveClass;
 import net.arna.jcraft.common.attack.core.MoveMap;
 import net.arna.jcraft.common.attack.moves.shared.KnockdownAttack;
@@ -26,6 +28,7 @@ import java.util.function.Consumer;
 public class ExampleStandEntity extends StandEntity<ExampleStandEntity, ExampleStandEntity.State> {
     public static final MoveSet<ExampleStandEntity, State> MOVE_SET = MoveSetManager.create(StandTypeRegistry.EXAMPLE_STAND,
             ExampleStandEntity::registerMoves, State.class);
+    public static final StandData DATA = StandData.of(StandInfo.of(Component.literal("Example Stand")));
 
     public static final SimpleAttack<ExampleStandEntity> LIGHT = new SimpleAttack<ExampleStandEntity>(JCraft.LIGHT_COOLDOWN,
             5, 8, 0.75f, 5f, 16, 1.5f, 0.2f, -0.1f)
@@ -57,7 +60,7 @@ public class ExampleStandEntity extends StandEntity<ExampleStandEntity, ExampleS
 
     private static void registerMoves(MoveMap<ExampleStandEntity, State> moveMap) {
         moveMap.register(MoveClass.LIGHT, LIGHT, State.LIGHT);
-        moveMap.register(MoveClass.HEAVY, LIGHT, State.HEAVY);
+        moveMap.register(MoveClass.HEAVY, HEAVY, State.HEAVY);
         moveMap.register(MoveClass.BARRAGE, BARRAGE, State.BARRAGE);
     }
 
