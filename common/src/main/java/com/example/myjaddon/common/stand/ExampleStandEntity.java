@@ -37,15 +37,6 @@ public class ExampleStandEntity extends StandEntity<ExampleStandEntity, ExampleS
                     Component.literal("Punch"),
                     Component.literal("An example punch attack")
             );
-    public static final KnockdownAttack<ExampleStandEntity> HEAVY = new KnockdownAttack<ExampleStandEntity>(100,
-            12, 22, 1f, 7f, 10, 1.75f, 0.5f, 0.6f, 40)
-            .withAnim(MagiciansRedEntity.State.HEAVY)
-            .withSound(JSoundRegistry.MR_HEAVY)
-            .withImpactSound(JSoundRegistry.TW_KICK_HIT)
-            .withInfo(
-                    Component.literal("Low Kick"),
-                    Component.literal("An example heavy attack")
-            );
     public static final MainBarrageAttack<ExampleStandEntity> BARRAGE = new MainBarrageAttack<ExampleStandEntity>(280,
             0, 40, 0.75f, 1f, 30, 2f, 0.25f, 0f, 3, Blocks.OBSIDIAN.defaultDestroyTime())
             .withSound(JSoundRegistry.STAR_PLATINUM_BARRAGE)
@@ -60,7 +51,7 @@ public class ExampleStandEntity extends StandEntity<ExampleStandEntity, ExampleS
 
     private static void registerMoves(MoveMap<ExampleStandEntity, State> moveMap) {
         moveMap.register(MoveClass.LIGHT, LIGHT, State.LIGHT);
-        moveMap.register(MoveClass.HEAVY, HEAVY, State.HEAVY);
+        moveMap.register(MoveClass.HEAVY, LIGHT, State.LIGHT);
         moveMap.register(MoveClass.BARRAGE, BARRAGE, State.BARRAGE);
     }
 
@@ -89,7 +80,6 @@ public class ExampleStandEntity extends StandEntity<ExampleStandEntity, ExampleS
         IDLE(builder -> builder.setAnimation(RawAnimation.begin().thenLoop("idle"))),
         LIGHT(builder -> builder.setAnimation(RawAnimation.begin().thenPlayAndHold("light"))),
         BLOCK(builder -> builder.setAnimation(RawAnimation.begin().thenLoop("block"))),
-        HEAVY(builder -> builder.setAnimation(RawAnimation.begin().thenPlayAndHold("heavy"))),
         BARRAGE(builder -> builder.setAnimation(RawAnimation.begin().thenLoop("barrage")));
 
         private final Consumer<AnimationState<ExampleStandEntity>> animator;
