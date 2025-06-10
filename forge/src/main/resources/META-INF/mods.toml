@@ -33,3 +33,10 @@ mandatory = true
 versionRange = "[9.2.14,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.myjaddon]]
+modId = "jcraft"
+mandatory = true
+versionRange = "[0.17.0,)"
+ordering = "AFTER"
+side = "BOTH"
