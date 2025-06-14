@@ -30,10 +30,12 @@ subprojects {
         // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
         // See https://docs.gradle.org/current/userguide/declaring_repositories.html
         // for more information about repositories.
-        mavenLocal() // TODO this is temporary
-
         mavenCentral()
 
+        maven {
+            name = "Planet's Maven"
+            url = "https://maven.planetteamspeak.dev/releases"
+        }
         maven {
             name = "AzureDoom Maven"
             url = "https://maven.azuredoom.com/mods"
