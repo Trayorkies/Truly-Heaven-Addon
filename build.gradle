@@ -33,8 +33,8 @@ subprojects {
         mavenCentral()
 
         maven {
-            name = "Planet's Maven"
-            url = "https://maven.planetteamspeak.dev/releases"
+            name = "JCraft Maven"
+            url = "https://maven.jcraft-eoe.com/releases"
         }
         maven {
             name = "AzureDoom Maven"
