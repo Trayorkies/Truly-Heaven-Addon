@@ -1,40 +1,40 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "Creative Commons"
 
 [[mods]]
-modId = "myjaddon"
-version = "${version}"
-displayName = "JCraft Example Addon"
-authors = "Me!"
+modId = "trulyheaven"
+version = "${0.0.1}"
+displayName = "JCraft: Truly Heaven"
+authors = "Trayorkies"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Heaven Stand Expansion Pack
 '''
-logoFile = "assets/myjaddon/icon.png"
+logoFile = "assets/trulyheaven/icon.png"
 
-[[dependencies.myjaddon]]
+[[dependencies.trulyheaven]]
 modId = "forge"
 mandatory = true
 versionRange = "[47,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.myjaddon]]
+[[dependencies.trulyheaven]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.myjaddon]]
+[[dependencies.trulyheaven]]
 modId = "architectury"
 mandatory = true
 versionRange = "[9.2.14,)"
 ordering = "AFTER"
 side = "BOTH"
 
-[[dependencies.myjaddon]]
+[[dependencies.trulyheaven]]
 modId = "jcraft"
 mandatory = true
 versionRange = "[0.17.0,)"
